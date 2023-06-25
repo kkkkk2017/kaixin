@@ -4,12 +4,31 @@ title: blog
 permalink: /blog/
 ---
 
-Some information about you!
+<div class="posts">
 
-### More Information
+    {% for post in site.posts %}
+    {% unless post.draft %}
+    {% unless post.redirect %}
+    <article class="container__block -narrow">
+        <h1 class="post-link-heading"><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.title }}</span></a></h1>
 
-A place to include any other types of information that you'd like to include about yourself.
+        {% assign author = site.authors[post.author] %}
+        <div class="footnote post-date">
+            {{ post.date | date: "%B %e, %Y" }}
+            {% if author.name %} by {{ author.name }}{% endif %}
+        </div>
 
-### Contact me
+        <div class="entry">
+            {% if post.thumbnail %}
+            <img src="{{ post.thumbnail }}" >
+            {% endif %}
+            {{ post.content | split:"<!--more-->" | first }}
+            <p class="footnote"><a href="{{ site.baseurl }}{{ post.url }}" class="secondary">Read More&hellip;</a></p>
+        </div>
+    </article>
+    {% endunless %}
+    {% endunless %}
+    {% endfor %}
 
-[email@domain.com](mailto:email@domain.com)
+    {% include cta.html %}
+</div>
