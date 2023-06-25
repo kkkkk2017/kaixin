@@ -19,7 +19,7 @@ We will use the "[Loop and Merge]:https://www.qualtrics.com/support/survey-platf
         ${lm://CurrentLoopNumber} or ${lm://TotalLoops}
 
 ### Done! Wait, you want to add conditions for the tasks?
-
+---
 ## Assigning Condition to the tasks
 Here I have two kinds of tasks randomly assigned to the participants. 
 And I want two conditions evenly appear to each participant.
@@ -27,7 +27,7 @@ To do this, we are going to use JavaScript and Qualtrics Embedded Data: https://
 
 ### Step 1: First, create two new Embedded Data and initiate them with values.
 Here I have three Embedded Data, '_currentCond_' which stores the condition for the current loop,
-'_totalCond1_' which stores the total appearance of condition 1, and '_totalCond2_' which stores the total appearance for condition 2.
+'_totalCond1_' which stores the total appearance of condition 1, and '_totalCond2_', which stores the total appearance of condition 2.
 ### Step 2: select a question where to generate the conditions, select JavaScript icon, and put the following code:
 ```javascript
     Qualtrics.SurveyEngine.addOnload(function() {
@@ -41,7 +41,7 @@ Here I have three Embedded Data, '_currentCond_' which stores the condition for 
     var current_cond;
 
     if (totalCond1 < total_count && totalCond2 < total_count) {
-        current_cond = Math.floor(Math.random() * 2); //randomly generate the contion
+        current_cond = Math.floor(Math.random() * 2); //randomly generate the condition
     } else if (totalCond1 == total_count) {
         current_cond = 1; //if all condition 1, then assign condition 2
     } else if (totalCond2 == total_count) {
@@ -68,7 +68,7 @@ Here I have three Embedded Data, '_currentCond_' which stores the condition for 
 ### Step 3: Create a new question, and add the display logic. Select Embedded Data -> currentCond and value.
 ### Done!
 
-
+---
 ## Creating Audio Tasks dynamically
 
 ### First, you need to host your audio files online. 
@@ -91,7 +91,6 @@ or if you want only need one audio,
 
 ### Step 4. If you want the audio generated dynamically, put the following JS code. 
 ```javascript
-    //Javascript
     Qualtrics.SurveyEngine.addOndisplay(function() {
     var task_github = [audio_url];
     var audio_name = '${lm://Field/5}';
@@ -113,7 +112,7 @@ or if you want only need one audio,
     });
 ```
 
-### Extra: keep on track of participants behaviours for the audio
+### Extra: keep on track of participants' behaviours for the audio
 ```javascript
     audio.addEventListener('play', function() {
 	
@@ -133,7 +132,7 @@ or get the audio play time.
     audio.duration
     audio.currentTime
 ```
-
+---
 ## Timestamp
 I want to get the timestamp for each question, and download it at the end of the experiment.
 ```javascript
@@ -166,7 +165,7 @@ At the end of the survey:
 	//document.getElementById('QID119').appendChild(downloadLink);
 
 ```
-
+---
 ## Something Extra: 
 if you want to create the questions more dynamically using JS.
 
@@ -273,7 +272,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 	}
 });
 ```
-
+---
 ## If you want to a timer:
 ```
 var timer;
