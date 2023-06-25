@@ -8,7 +8,7 @@ But this method makes debugging very difficult, especially for someone like, me,
 This tutorial provides a guide to Qualtrics users to build such repetitive tasks without the tedious copying and pasting. 
 
 
-We will use the "[Loop and Merge]:https://www.qualtrics.com/support/survey-platform/survey-module/block-options/loop-and-merge/" function in Qualtrics. 
+We will use the [Loop and Merge](https://www.qualtrics.com/support/survey-platform/survey-module/block-options/loop-and-merge/) function in Qualtrics. 
 ### Step 1: create a multiple choice questions outside the loop block
 ### Step 2: select loop based on that question
 ### Step 3: add Fields by opening this Table
@@ -23,7 +23,7 @@ We will use the "[Loop and Merge]:https://www.qualtrics.com/support/survey-platf
 ## Assigning Condition to the tasks
 Here I have two kinds of tasks randomly assigned to the participants. 
 And I want two conditions evenly appear to each participant.
-To do this, we are going to use JavaScript and Qualtrics Embedded Data: https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/ .
+To do this, we are going to use JavaScript and [Qualtrics Embedded Data](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/).
 
 ### Step 1: First, create two new Embedded Data and initiate them with values.
 Here I have three Embedded Data, '_currentCond_' which stores the condition for the current loop,
