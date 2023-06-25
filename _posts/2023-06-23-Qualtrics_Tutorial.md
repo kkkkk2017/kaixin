@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Qualtrics_Tutorial
+title: Creating repetitive Task in Qualtrics using JS
 ---
-
-# Creating repetitive Task in Qualtrics using JS
 
 Many user studies contain tasks that have similar structures but different contents. Most people implement this task by copying and pasting numerous blocks. 
 But this method makes debugging very difficult, especially for someone like, me, who always makes minor mistakes.
