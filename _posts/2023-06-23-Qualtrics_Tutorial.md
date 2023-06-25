@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Qualtrics_Tutorial
+permalink: /qualtricsJS/
 ---
 
 # Qualtrics Tutorial
