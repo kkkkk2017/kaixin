@@ -231,7 +231,7 @@ Generate Speak or Type Tasks.
 <!--This is a fake button-->
 ```
 
-```javascript
+```
 Qualtrics.SurveyEngine.addOnload(function()
 {
 	/*Place your JavaScript here to run when the page loads*/
@@ -275,7 +275,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 ```
 
 ## If you want to a timer:
-```javascript
+```
 var timer;
 
 Qualtrics.SurveyEngine.addOnReady(function()
@@ -337,6 +337,4 @@ To submit page:
 ```
 
 ## Now you are all setup. Have a fun experiment time!
-
-![_config.yml]({{ site.baseurl }}/images/config.png)
 
