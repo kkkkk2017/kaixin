@@ -3,7 +3,6 @@ layout: post
 title: Qualtrics_Tutorial
 ---
 
-# Qualtrics Tutorial
 
 Many use study uses the tasks which have similar structure but different contents. Most people implement this task by copy and pasting numerous block. 
 But this method makes debuggging very difficult, especially, for someone like, me, who always makes minor mistakes.
@@ -176,7 +175,7 @@ if you want to create the questions more dynamically using JS.
 <div id="answer"></div>
 ```
 Generate Read or Listen Tasks
-```Javascript
+```javascript
 Qualtrics.SurveyEngine.addOnload(function()
 {
 	/*Place your JavaScript here to run when the page loads*/
