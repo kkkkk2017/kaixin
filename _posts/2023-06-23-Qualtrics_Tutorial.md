@@ -10,9 +10,9 @@ This tutorial provides a guide to Qualtrics users to build such repetitive tasks
 
 We will use the [Loop and Merge](https://www.qualtrics.com/support/survey-platform/survey-module/block-options/loop-and-merge/) function in Qualtrics. 
 ### Step 1: create a multiple-choice question outside the loop block
-### Step 2: on the loop block, click ![loop and merge](/images/loopnmerge.JPG),
-### Step 3: click the loop icon ![loop icon](/images/loopicon.JPG) on the current block , then select loop based on that question
-### Step 4: add Fields by opening this Table ![loop Table](/images/loop_table.JPG)
+### Step 2: on the loop block, click ![loop and merge]({{ site.baseurl }}/images/loopnmerge.JPG),
+### Step 3: click the loop icon ![loop icon]({{ site.baseurl }}/images/loopicon.JPG) on the current block , then select loop based on that question
+### Step 4: add Fields by opening this Table ![loop Table]({{ site.baseurl }}/images/loop_table.JPG)
 ### Step 5: select display all fields, and randomize loop order
     To access the field in the Loop Table, you can use: 
         {lm://Field/1}
@@ -29,7 +29,7 @@ To do this, we are going to use JavaScript and [Qualtrics Embedded Data](https:/
 ### Step 1: First, create two new Embedded Data and initiate them with values.
 Here I have three Embedded Data, '_currentCond_' which stores the condition for the current loop,
 '_totalCond1_' which stores the total appearance of condition 1, and '_totalCond2_', which stores the total appearance of condition 2.
-### Step 2: select a question where to generate the conditions, select add JavaScript ![add JS](/images/QualtricsJS.JPG), and put the following code:
+### Step 2: select a question where to generate the conditions, select add JavaScript ![add JS]({{ site.baseurl }}/images/QualtricsJS.JPG), and put the following code:
 ```javascript
     Qualtrics.SurveyEngine.addOnload(function() {
     //get the total loop count and divide by two, which is the expected total appearance for each condition.
